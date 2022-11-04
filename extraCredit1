@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+   int code, type;
+   cout << "1. green\n2. blue\n0. No coupon\nEnter coupon color: ";
+   cin >> code;
+   cout << "1. adult\n2. child\nEnter Haircut type: ";
+   cin >> type;
+   double discount, charge;
+   if(type == 1){
+      charge = 15.50;
+   } else {
+      charge = 10.50;
+   }
+   if(code == 1) {
+      if(type == 1) {
+         discount = 3.5;
+      } else {
+         discount = 2.5;
+      }
+   } else if(code == 2) {
+      if(type == 1) {
+         discount = 2.59;
+      } else {
+         discount = 1.5;
+      }
+   }
+   charge -= discount;
+   cout << "Haircut charge amount is $" << charge << endl;
+   return 0;
+}
